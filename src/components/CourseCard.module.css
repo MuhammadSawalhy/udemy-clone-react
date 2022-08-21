@@ -1,0 +1,72 @@
+.course {
+  text-decoration: none;
+  /* bootstrap changes the color of <a> when it is hovered */
+  color: black !important;
+  display: grid;
+  align-content: flex-start;
+  grid-gap: 0.4rem;
+  max-width: 30rem;
+  min-width: 18rem;
+  height: 40rem;
+  flex-grow: 1;
+}
+
+.course:hover .img {
+  transition: filter linear 100ms;
+  filter: brightness(80%);
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.title {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ratingRatio {
+  color: #b4690e;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.ratingStars {
+  height: 1.7rem;
+}
+
+.price {
+  padding: 0.4rem 0;
+  font-weight: bold;
+}
+
+.oldPrice {
+  padding: 0.4rem 0;
+  text-decoration: line-through;
+  color: #6a6f73;
+  margin-left: 0.5rem;
+}
+
+.badges {
+  display: flex;
+  margin: 0.4rem 0;
+  gap: 0.4rem 0.8rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
+  background-color: #eceb98;
+  color: #3d3c0a;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
