@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
-import CoursesCarousel from "./CoursesCarousel";
+import CoursesCarousel from "../CoursesCarousel";
 import classes from "./Courses.module.css";
-import coursesDB from "../constants/db.json";
+import coursesDB from "../../constants/db.json";
 
-const Courses = ({title, header, description, category }) => {
+const Courses = ({ title, header, description, category }) => {
   const courses = useMemo(
     () => coursesDB.courses.filter((course) => course.category === category),
     [category]
@@ -19,6 +19,6 @@ const Courses = ({title, header, description, category }) => {
       <CoursesCarousel courses={courses} />
     </div>
   );
-}
+};
 
 export default Courses;

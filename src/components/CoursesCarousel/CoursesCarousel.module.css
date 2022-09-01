@@ -1,5 +1,5 @@
-.carouselControlPrev,
-.carouselControlNext {
+.coursesCarousel :global(.carousel-control-prev),
+.coursesCarousel :global(.carousel-control-next) {
   border: 1px solid #6a6f73;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
   background-color: #1c1d1f;
@@ -11,16 +11,16 @@
   top: 25%;
 }
 
-.carouselControlPrev:hover,
-.carouselControlNext:hover {
+.coursesCarousel :global(.carousel-control-prev):hover,
+.coursesCarousel :global(.carousel-control-next):hover {
   opacity: 1 !important;
   background-color: #393b3f;
 }
 
-.carouselControlPrev {
+.coursesCarousel :global(.carousel-control-prev) {
   left: -1.6rem;
 }
 
-.carouselControlNext {
+.coursesCarousel :global(.carousel-control-next) {
   right: -1.6rem;
 }
