@@ -1,9 +1,9 @@
-import React, { useMemo } from "react";
-import Button from "../Button";
-import CoursesCarousel from "../CoursesCarousel";
+import { useMemo } from "react";
+import Button from "../../../components/Button";
+import CoursesCarousel from "../../../components/CoursesCarousel";
 
-import classes from "./Courses.module.css";
-import coursesDB from "../../constants/db.json";
+import classes from "./Tab.module.css";
+import coursesDB from "../../../constants/db.json";
 
 const Courses = ({ title, header, description, category }) => {
   const courses = useMemo(

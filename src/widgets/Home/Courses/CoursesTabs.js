@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classes from "./CoursesTabs.module.css";
 import clsx from "clsx";
-import Courses from "../Courses";
-import tabs from "../../constants/tabs.json";
+import Tab from "./Tab";
+import tabs from "../../../constants/tabs.json";
 
 const CoursesTabs = () => {
   const [activeTab, setActiveTab] = useState(tabs.find((tab) => tab.category === "python"));
@@ -19,7 +19,8 @@ const CoursesTabs = () => {
           </button>
         ))}
       </div>
-      <Courses {...activeTab} />
+
+      <Tab {...activeTab} />
     </div>
   );
 };
