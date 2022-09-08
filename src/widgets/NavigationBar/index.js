@@ -6,6 +6,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import classes from "./NavigationBar.module.css";
 import clsx from "clsx";
+import NavSearch from "./NavSearch";
 
 const NavigationBar = () => {
   return (
@@ -20,12 +21,7 @@ const NavigationBar = () => {
         </a>
       </div>
       <button className={clsx(classes.navLink)}>Categories</button>
-      <form className={classes.search}>
-        <button>
-          <SearchIcon />
-        </button>
-        <input type="text" autoComplete="off" name="query" placeholder="Search for anything" />
-      </form>
+      <NavSearch />
       <ul className={classes.links}>
         <li>
           <a className={classes.navLink} href="/udemy-business">
