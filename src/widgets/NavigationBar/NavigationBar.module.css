@@ -8,20 +8,20 @@ nav {
   z-index: 100;
 }
 
-nav .nav-logo {
-  width: 91px;
-}
-
-nav .nav-logo_container {
+.logo {
   display: grid;
   place-items: center;
 }
 
-nav .nav-logo_link {
+.logo img {
+  width: 91px;
+}
+
+.nav a {
   line-height: 0; /* to make the link fit the image inside it */
 }
 
-nav .nav-btn {
+.btn {
   border: none;
   background-color: transparent;
   padding: 0 1.2rem;
@@ -31,20 +31,20 @@ nav .nav-btn {
   cursor: pointer;
 }
 
-nav .nav-btn-placeholder {
+.placeholder {
   visibility: hidden;
   width: 4.8rem;
   height: 4.8rem;
 }
 
-nav .nav-links {
+.links {
   list-style: none;
   display: flex;
   padding: 0;
   margin: 0;
 }
 
-nav .nav-link {
+.navLink {
   margin: 1.2rem 0;
   padding: 0 1.2rem;
   background-color: transparent;
@@ -64,22 +64,15 @@ nav .nav-link {
   white-space: nowrap;
 }
 
-nav .nav-link:visited {
+.navLink:visited {
   color: inherit;
 }
 
-nav .nav-link:hover {
-  /* 
-  * this filter is equivalent to `background-color: #401b9c`
-  * we need to do this to apply also to the <img> tags that source svg icons
-  * tool used: https://codepen.io/sosuke/pen/Pjoqqp?editors=0110
-  * stackoverflow: https://stackoverflow.com/a/53336754/10891757
-  * */
-  filter: brightness(0) saturate(100%) invert(15%) sepia(65%) saturate(4496%) hue-rotate(255deg)
-    brightness(74%) contrast(103%);
+.navLink:hover {
+  color: #401b9c;
 }
 
-nav .nav-search {
+.search {
   flex-grow: 1;
   border-radius: 100px;
   padding: 0 2.4rem 0 0;
@@ -91,18 +84,18 @@ nav .nav-search {
   overflow: hidden;
 }
 
-nav .nav-search input {
+.search input {
   border: none;
   background-color: transparent;
   flex-grow: 1;
   min-width: 0;
 }
 
-nav .nav-search input:focus {
+.search input:focus {
   outline: none;
 }
 
-nav .nav-search button {
+.search button {
   padding: 0;
   height: 100%;
   width: 4.8rem;
@@ -111,12 +104,12 @@ nav .nav-search button {
   cursor: pointer;
 }
 
-nav .nav-search button[disabled] {
+.search button[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-nav > .sm-only {
+nav > .smOnly {
   visibility: hidden;
   position: absolute;
 }
@@ -131,28 +124,28 @@ nav > .sm-only {
     position: absolute;
   }
 
-  nav > .sm-only {
+  nav > .smOnly {
     visibility: visible;
     position: static;
   }
 
-  nav .nav-logo {
+  nav .logo img {
     width: 75px;
   }
 
-  nav .nav-logo_container {
+  nav .logo {
     flex-grow: 1;
   }
 }
 
 @media screen and (max-width: 1080px) {
-  nav .nav-link-business {
+  nav .links > li:first-of-type {
     display: none;
   }
 }
 
 @media screen and (max-width: 920px) {
-  nav .nav-link-teach {
+  nav .links > li:nth-of-type(2) {
     display: none;
   }
 }

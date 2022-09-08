@@ -62,56 +62,6 @@ button {
   object-fit: fill;
 }
 
-.button {
-  height: 4rem;
-  min-width: 8rem;
-  padding: 0 1.2rem;
-  background-color: transparent;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: bottom;
-  white-space: nowrap;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.button.button-secondary {
-  border: 1px solid #1c1d1f;
-  color: #1c1d1f;
-}
-
-.button.button-primary {
-  background: #1c1d1f;
-  color: white;
-}
-
-.button.button-icon {
-  min-width: auto;
-  width: 4rem;
-  padding: 0 1rem;
-}
-
-.button.button-icon > .icon {
-  width: 2rem;
-  height: 2rem;
-}
-
-.button.button-icon:hover,
-.button.button-secondary:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-.button.button-primary:hover {
-  background-color: #000;
-}
-
 .text-small-lite {
   font-size: 1.2rem;
   color: #6a6f73;
