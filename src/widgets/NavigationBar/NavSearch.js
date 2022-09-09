@@ -2,6 +2,7 @@ import classes from "./NavigationBar.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 
 const NavSearch = () => {
+  // TODO: make the search work
   return (
     <form className={classes.search}>
       <button>

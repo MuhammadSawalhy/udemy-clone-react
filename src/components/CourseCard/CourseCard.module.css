@@ -9,6 +9,11 @@
   min-width: 18rem;
   height: 40rem;
   flex-grow: 1;
+  /*
+  * greater than the max-width just to force all to have the same width
+  * then will still be able to skrink and grow
+  */
+  flex-basis: 40rem;
 }
 
 .course:hover .img {
@@ -25,22 +30,6 @@
   margin-top: 0.8rem;
   font-size: 1.6rem;
   font-weight: bold;
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.ratingRatio {
-  color: #b4690e;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-.ratingStars {
-  height: 1.7rem;
 }
 
 .price {

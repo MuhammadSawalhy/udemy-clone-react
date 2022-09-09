@@ -1,0 +1,49 @@
+.header {
+  background-color: #1c1d1f;
+  padding-block: 3.2rem;
+  color: white;
+}
+
+.header > div {
+  padding-inline: 4.8rem;
+  max-width: 118.4rem;
+  margin: auto;
+}
+
+.header a,
+.header a:visited {
+  color: #cec0fc;
+}
+
+.header .rating {
+  display: flex;
+  gap: 1rem;
+}
+
+.context {
+  margin-block: 1.6rem;
+}
+
+.context a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.context,
+.details {
+  max-width: 70rem;
+}
+
+.details > div {
+  margin-bottom: 0.8rem;
+}
+
+.lang {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.lang > span {
+  display: flex;
+  gap: 0.8rem;
+}

@@ -4,9 +4,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import LanguageIcon from "@mui/icons-material/Language";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
+import NavSearch from "./NavSearch";
+import { NavLink } from "react-router-dom";
+import logoSrc from "./logo-udemy.svg";
 import classes from "./NavigationBar.module.css";
 import clsx from "clsx";
-import NavSearch from "./NavSearch";
 
 const NavigationBar = () => {
   return (
@@ -16,44 +18,44 @@ const NavigationBar = () => {
       </button>
       <div className={clsx(classes.placeholder, classes.smOnly)}></div>
       <div className={clsx(classes.logo, classes.sm)}>
-        <a href={process.env.ROOT_URL ?? "/"}>
-          <img src="./assets/logo-udemy.svg" alt="udemy logo" />
-        </a>
+        <NavLink to={process.env.ROOT_URL ?? "/"}>
+          <img src={logoSrc} alt="udemy logo" />
+        </NavLink>
       </div>
       <button className={clsx(classes.navLink)}>Categories</button>
       <NavSearch />
       <ul className={classes.links}>
         <li>
-          <a className={classes.navLink} href="/udemy-business">
+          <NavLink className={classes.navLink} to="/udemy-business">
             Udemy Business
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a className={classes.navLink} href="/teach-on-udemy">
+          <NavLink className={classes.navLink} to="/teach-on-udemy">
             Teach on Udemy
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a className={clsx(classes.btn, classes.navLink)} href="/cart">
+          <NavLink className={clsx(classes.btn, classes.navLink)} to="/cart">
             <ShoppingCartOutlinedIcon />
-          </a>
+          </NavLink>
         </li>
       </ul>
-      <a href="/login">
+      <NavLink to="/login">
         <Button varient="secondary">Log in</Button>
-      </a>
-      <a href="/signup">
+      </NavLink>
+      <NavLink to="/signup">
         <Button>Sign up</Button>
-      </a>
+      </NavLink>
       <Button varient="secondary" icon>
         <LanguageIcon />
       </Button>
       <button className={clsx(classes.btn, classes.smOnly)}>
         <SearchIcon />
       </button>
-      <a className={clsx(classes.btn, classes.smOnly)} href="/cart">
+      <NavLink className={clsx(classes.btn, classes.smOnly)} to="/cart">
         <ShoppingCartOutlinedIcon />
-      </a>
+      </NavLink>
     </nav>
   );
 };

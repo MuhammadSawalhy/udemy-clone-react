@@ -1,0 +1,20 @@
+.homepage main {
+  padding: 0 2.4rem;
+}
+
+.homepage main,
+.homepage header {
+  max-width: 134rem;
+  /* to center horizontally */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.homepage section {
+  margin: 6.4rem 0;
+}
+
+.homepage section:nth-of-type(2) h2 {
+  margin-bottom: 2.4rem;
+}
+

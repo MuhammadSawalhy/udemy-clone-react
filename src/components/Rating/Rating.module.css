@@ -1,0 +1,19 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ratingRatio {
+  color: #b4690e;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.ratingStars {
+  height: 1.7rem;
+}
+
+.numReviews {
+  text-decoration: inherit;
+}

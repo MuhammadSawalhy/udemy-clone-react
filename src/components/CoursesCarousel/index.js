@@ -18,10 +18,11 @@ const CoursesCarousel = ({ courses }) => {
   }, [activeIndex, slidesCount]);
 
   const slides = [];
-  let coursesPool = Array.from(courses);
+  let coursesPool = [...courses];
 
-  // take from the coures and make slide with N cards, where N = cardsCount
-  // when the exists number less than N just take them, the loop will end when no more courses exist
+  // take from the coures and make a slide with N cards, where N = cardsCount
+  // when the exists number less than N just take them, the loop will end when
+  // no more courses are left
   while (coursesPool.length) {
     const slideCourses = coursesPool.slice(0, cardsCount);
     coursesPool = coursesPool.slice(cardsCount);
