@@ -4,7 +4,7 @@ import CourseDetails from "widgets/CoursePage/CourseDetails";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { BACKEND_URL } from "constants";
-import classes from "./Course.module.css";
+import classes from "./index.module.css";
 
 const Course = () => {
   const { courseId } = useParams();
@@ -28,6 +28,7 @@ const Course = () => {
     );
   }
 
+  // TODO: build SeeMore component and use it in needed places
   return (
     <div className={classes.coursepage}>
       <Header course={data.details} />

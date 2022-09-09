@@ -1,0 +1,47 @@
+.name {
+  color: #5624d0;
+  text-decoration-color: black;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 1px;
+  margin-bottom: 0.4rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.job {
+  display: block;
+  color: #6a6f73;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+  gap: 1.6rem;
+}
+
+.details > img {
+  width: 11.2rem;
+  height: 11.2rem;
+  border-radius: 100%;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  padding: 0.4rem 0;
+}
+
+.details svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.description {
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+}
