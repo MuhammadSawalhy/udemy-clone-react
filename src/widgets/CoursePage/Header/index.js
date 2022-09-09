@@ -16,6 +16,7 @@ const Header = ({ course }) => {
     num_reviews,
     num_subscribers,
     visible_instructors,
+    caption_languages,
     context_info: { category, subcategory, label },
   } = course;
   const lastUpdateDate = new Date(last_update_date).toLocaleString().split(", ")[0];
@@ -57,7 +58,7 @@ const Header = ({ course }) => {
               <NewReleasesIcon /> Last updated {lastUpdateDate}
             </span>
             <span>
-              <LanguageIcon /> English
+              <LanguageIcon /> {caption_languages.join()}
             </span>
             <span>
               <ClosedCaptionIcon /> English

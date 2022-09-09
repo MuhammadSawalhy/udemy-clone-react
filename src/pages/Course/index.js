@@ -1,7 +1,10 @@
 import Header from "widgets/CoursePage/Header";
+import Instructors from "widgets/CoursePage/Instructors";
+import CourseDetails from "widgets/CoursePage/CourseDetails";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { BACKEND_URL } from "constants";
+import classes from "./Course.module.css";
 
 const Course = () => {
   const { courseId } = useParams();
@@ -28,8 +31,14 @@ const Course = () => {
   console.log(data);
 
   return (
-    <div>
+    <div className={classes.coursepage}>
       <Header course={data.details} />
+      <main>
+        <div className={classes.mainInner}>
+          <CourseDetails course={data} />
+          <Instructors instructors={data.details.visible_instructors} />
+        </div>
+      </main>
     </div>
   );
 };
