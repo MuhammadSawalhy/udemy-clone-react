@@ -28,8 +28,6 @@ const Course = () => {
     );
   }
 
-  console.log(data);
-
   return (
     <div className={classes.coursepage}>
       <Header course={data.details} />

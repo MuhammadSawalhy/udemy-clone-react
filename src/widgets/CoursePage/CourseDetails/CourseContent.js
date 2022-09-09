@@ -5,6 +5,7 @@ import classes from "./CourseContent.module.css";
 import clsx from "clsx";
 
 const Section = ({ section }) => {
+  // TODO: make this opens and closes when you click on it
   const { title, content_length, lecture_count, items } = section;
   const [opened, setOpened] = useState(false);
 
@@ -36,7 +37,6 @@ const Section = ({ section }) => {
 };
 
 const CourseContent = ({ curriculum }) => {
-  console.log(curriculum);
   const estimatedTime = curriculum.estimated_content_length_text.split(":").slice(0, 2);
   const [sections, setSections] = useState(curriculum.sections.slice(0, 10));
   return (
