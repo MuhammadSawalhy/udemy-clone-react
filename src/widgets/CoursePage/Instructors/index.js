@@ -1,7 +1,7 @@
 const index = ({ instructors }) => {
   return (
     <section>
-      <h1>Instructors</h1>
+      <h2>Instructors</h2>
       <pre>{JSON.stringify(instructors, null, 2)}</pre>
     </section>
   );

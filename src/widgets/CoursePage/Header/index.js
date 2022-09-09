@@ -4,7 +4,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import ClosedCaptionIcon from "@mui/icons-material/ClosedCaption";
 import NewReleasesIcon from "@mui/icons-material/NewReleases";
 import Rating from "components/Rating";
-import classes from "./Header.module.css";
+import classes from "./index.module.css";
 
 const Header = ({ course }) => {
   const {
@@ -46,10 +46,10 @@ const Header = ({ course }) => {
             )}
             {visible_instructors.slice(1).map((inst) => {
               return (
-                <>
+                <span key={inst.url}>
                   {", "}
                   <Link to={inst.url}>{inst.display_name}</Link>
-                </>
+                </span>
               );
             })}
           </div>

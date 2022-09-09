@@ -1,0 +1,9 @@
+.courseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.courseDetails h2 {
+  margin-bottom: 1.6rem;
+}

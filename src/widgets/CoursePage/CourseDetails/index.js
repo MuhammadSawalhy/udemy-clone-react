@@ -1,10 +1,14 @@
 import CourseContent from "./CourseContent";
 import WhatYouWillLearn from "./WhatYouWillLearn";
+import classes from "./index.module.css";
 
 const index = ({ course }) => {
-  const { details, curriculum_context: curriculum } = course;
+  const {
+    details,
+    curriculum_context: { data: curriculum },
+  } = course;
   return (
-    <section className="d-flex g-6 flex-col">
+    <section className={classes.courseDetails}>
       <WhatYouWillLearn objectives={details.objectives_summary} />
       <CourseContent curriculum={curriculum} />
     </section>

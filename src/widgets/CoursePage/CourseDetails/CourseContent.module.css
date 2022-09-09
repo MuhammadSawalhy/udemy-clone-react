@@ -1,0 +1,36 @@
+.expandAllBtn {
+  color: #5624d0;
+  background-color: transparent;
+  min-width: auto;
+  padding: 0;
+  border: none;
+  font-weight: bold;
+  height: 4rem;
+}
+
+.sectionsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.sectionsHeader .summary {
+  padding: 0.8rem 0;
+}
+
+.sections {
+  border-left: 1px solid #d1d7dc;
+  border-right: 1px solid #d1d7dc;
+}
+
+.section {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.6rem 2.4rem;
+  background-color: #f7f9fa;
+  border-top: 1px solid #d1d7dc;
+  border-bottom: 1px solid #d1d7dc;
+  margin-bottom: -1px;
+  user-select: none;
+}
