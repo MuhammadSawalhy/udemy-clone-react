@@ -6,6 +6,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Routes from "./widgets/Routes";
 import NavigationBar from "./widgets/NavigationBar";
+import Footer from "widgets/Footer";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -30,6 +31,7 @@ root.render(
         <BrowserRouter>
           <NavigationBar />
           <Routes />
+          <Footer />
         </BrowserRouter>
       </QueryClientProvider>
     </ThemeProvider>

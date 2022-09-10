@@ -5,8 +5,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavSearch from "./NavSearch";
-import { NavLink } from "react-router-dom";
-import logoSrc from "./logo-udemy.svg";
+import { Link, NavLink } from "react-router-dom";
 import classes from "./NavigationBar.module.css";
 import clsx from "clsx";
 
@@ -18,9 +17,9 @@ const NavigationBar = () => {
       </button>
       <div className={clsx(classes.placeholder, classes.smOnly)}></div>
       <div className={clsx(classes.logo, classes.sm)}>
-        <NavLink to={process.env.ROOT_URL ?? "/"}>
-          <img src={logoSrc} alt="udemy logo" />
-        </NavLink>
+        <Link to={process.env.ROOT_URL ?? "/"}>
+          <img src="/assets/logo-udemy.svg" alt="udemy logo" />
+        </Link>
       </div>
       <button className={clsx(classes.navLink)}>Categories</button>
       <NavSearch />

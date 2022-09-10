@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import classes from "./Details.module.css";
 import clsx from "clsx";
+import Button from "components/Button";
 
 const Langs = ({ captions, lastUpdateDate }) => {
   const [captionLangs, setCaptionLangs] = useState(captions.slice(0, 2));
@@ -26,14 +27,14 @@ const Langs = ({ captions, lastUpdateDate }) => {
           {captionLangs.length < captions.length && (
             <>
               <span>, </span>
-              <button
-                className={classes.moreCaptions}
+              <Button
+                varient="text"
                 onClick={() => {
                   setCaptionLangs(captions);
                 }}
               >
                 {captions.length - captionLangs.length} more
-              </button>
+              </Button>
             </>
           )}
         </span>

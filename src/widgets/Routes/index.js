@@ -4,6 +4,7 @@ import Course from "../../pages/Course";
 import { Routes, Route } from "react-router-dom";
 
 const index = () => {
+  // TODO: build 404 page
   return (
       <Routes>
         <Route path="/">

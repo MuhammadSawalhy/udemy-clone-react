@@ -1,0 +1,144 @@
+footer > div {
+  background: #1c1d1f;
+  border-top: 1px solid #3e4143;
+  color: white;
+}
+
+footer > div:first-of-type {
+  padding: 1.2rem 4.8rem;
+}
+
+footer > div:last-of-type {
+  padding: 2.4rem 4.8rem 8rem;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topText {
+  flex: 1;
+  min-width: 40rem;
+  padding: 1.2rem 2.4rem 1.2rem 0;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.topText a {
+  color: #cec0fc;
+  text-decoration: none;
+}
+
+.topText a:hover {
+  color: #cec0fc;
+  text-decoration: underline;
+}
+
+.companies {
+  display: flex;
+  gap: 2.4rem;
+  padding: 1.2rem 0;
+}
+
+.links {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  flex-basis: 25rem;
+}
+
+.links ul li {
+  padding: 0.4rem 0;
+}
+
+.links ul a,
+.links ul button {
+  background: transparent;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  width: 100%;
+  text-align: start;
+  padding: 0;
+}
+
+.links ul a:hover,
+.links ul button:hover {
+  text-decoration: underline;
+}
+
+.lang {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  filter: invert(100%); /* to make it work with dark background */
+}
+
+.lang button {
+  min-width: 14rem;
+  text-align: start;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6.4rem 0 3.2rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .links {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .links ul {
+    flex-basis: 0;
+    margin: 0;
+    order: 2;
+  }
+
+  .lang {
+    order: 1;
+    display: block;
+    padding: 2.4rem 0;
+  }
+
+  footer > div:first-of-type {
+    padding: 1.2rem 3.2rem;
+  }
+
+  footer > div:last-of-type {
+    padding: 0 3.2rem 8rem;
+  }
+
+  .logo {
+    display: block;
+    padding: 1.6rem 0;
+  }
+
+  .logo > a {
+    display: block;
+    padding: 1.6rem 0;
+  }
+
+  .logo > span {
+    display: block;
+    padding-bottom: 1.6rem;
+  }
+
+  .topText {
+    min-width: auto;
+  }
+
+  .companies {
+    flex-wrap: wrap;
+  }
+}
