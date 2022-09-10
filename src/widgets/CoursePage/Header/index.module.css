@@ -2,26 +2,33 @@
   background-color: #1c1d1f;
   padding-block: 3.2rem;
   color: white;
+  font-size: 1.4rem;
 }
 
 .header > div {
   padding-inline: 4.8rem;
-  max-width: 118.4rem;
+  max-width: var(--max-width);
   margin: auto;
+  position: relative;
+}
+
+.sidebar {
+  position: absolute;
+  right: 4.8rem; /* same as padding */
+  top: 0;
+  width: 34rem;
 }
 
 .header a,
 .header a:visited {
   color: #cec0fc;
-}
-
-.header .rating {
-  display: flex;
-  gap: 1rem;
+  font-size: 1.4rem;
 }
 
 .context {
-  margin-block: 1.6rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
 }
 
 .context a {
@@ -29,21 +36,52 @@
   font-weight: bold;
 }
 
-.context,
-.details {
-  max-width: 70rem;
+.context {
+  max-width: var(--inner-max-width);
 }
 
-.details > div {
-  margin-bottom: 0.8rem;
+.preview {
+  margin-bottom: 1.6rem;
 }
 
-.lang {
-  display: flex;
-  gap: 1.6rem;
+.smOnly {
+  display: none;
 }
 
-.lang > span {
-  display: flex;
-  gap: 0.8rem;
+@media screen and (max-width: 1080px) {
+  .lgOnly {
+    display: none;
+  }
+
+  .smOnly {
+    display: block;
+  }
+
+  .header > div {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header > div {
+    padding: 0;
+    width: auto;
+  }
+
+  .preview {
+    max-width: var(--inner-max-width);
+    margin-inline: auto;
+  }
+
+  .details, .context, .addToCart {
+    padding-inline: 2.4rem;
+  }
+
+  .details h1 {
+    font-size: 2.4rem;
+  }
+
+  .details p {
+    font-size: 1.6rem;
+  }
 }

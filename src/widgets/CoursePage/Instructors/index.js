@@ -1,7 +1,6 @@
 import Instructor from "./Instructor";
 
 const index = ({ instructors }) => {
-  console.log(instructors);
   return (
     <section>
       <h2>Instructors</h2>

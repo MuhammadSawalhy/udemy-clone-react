@@ -1,73 +1,44 @@
+import classes from "./index.module.css";
+import clsx from "clsx";
 import { Link } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import LanguageIcon from "@mui/icons-material/Language";
-import ClosedCaptionIcon from "@mui/icons-material/ClosedCaption";
-import NewReleasesIcon from "@mui/icons-material/NewReleases";
-import Rating from "components/Rating";
-import classes from "./index.module.css";
+import Details from "./Details";
+import SideBarCard from "../SideBarCard";
+import AddToCartSmallScreen from "./AddToCartSmallScreen";
+import Preview from "../Preview";
+
+const ContextInfo = ({ context }) => {
+  const { category, subcategory, label } = context;
+
+  return (
+    <div className={classes.context}>
+      <Link to={category.url}>{category.title}</Link>
+      <ChevronRightIcon fontSize="small" />
+      {subcategory && (
+        <>
+          <Link to={subcategory.url}>{subcategory.title}</Link>
+          <ChevronRightIcon fontSize="small" />
+        </>
+      )}
+      <Link to={label.url}>{label.display_name}</Link>
+    </div>
+  );
+};
 
 const Header = ({ course }) => {
-  const {
-    id,
-    title,
-    rating,
-    headline,
-    last_update_date,
-    num_reviews,
-    num_subscribers,
-    visible_instructors,
-    caption_languages,
-    context_info: { category, subcategory, label },
-  } = course;
-  const lastUpdateDate = new Date(last_update_date).toLocaleString().split(", ")[0];
+  const { details } = course;
   return (
     <header className={classes.header}>
       <div>
-        <div className={classes.context}>
-          <Link to={category.url}>{category.title}</Link>
-          <ChevronRightIcon />
-          {subcategory && <Link to={subcategory.url}>{subcategory.title}</Link>}
-          <Link to={label.url}>{label.display_name}</Link>
-        </div>
-        <div className={classes.details}>
-          <h1>{title}</h1>
-          <p>{headline}</p>
-          <div className={classes.rating}>
-            <Link to={`/course/${id}/#reviews`}>
-              {/* TODO: fix dark theme with empty stars */}
-              <Rating rating={rating} numReviews={num_reviews} />
-            </Link>
-            <span>{num_subscribers} students</span>
-          </div>
-          <div>
-            Created by{" "}
-            {visible_instructors.length > 0 && (
-              <Link to={visible_instructors[0].url}>{visible_instructors[0].display_name}</Link>
-            )}
-            {visible_instructors.slice(1).map((inst) => {
-              return (
-                <span key={inst.url}>
-                  {", "}
-                  <Link to={inst.url}>{inst.display_name}</Link>
-                </span>
-              );
-            })}
-          </div>
-          <div className={classes.lang}>
-            <span>
-              <NewReleasesIcon /> Last updated {lastUpdateDate}
-            </span>
-            <span>
-              <LanguageIcon /> {caption_languages.join()}
-            </span>
-            <span>
-              <ClosedCaptionIcon /> English
-            </span>
-          </div>
-        </div>
+        <ContextInfo context={details.context_info} />
+        <Preview className={clsx(classes.preview, classes.smOnly)} image={details.image_750x422} />
+        <Details className={classes.details} details={details} />
+        <AddToCartSmallScreen className={clsx(classes.addToCart, classes.smOnly)} />
+        <SideBarCard className={clsx(classes.sidebar, classes.lgOnly)} course={course} />
       </div>
     </header>
   );
 };
 
 export default Header;
+

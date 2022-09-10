@@ -53,7 +53,7 @@ const NavigationBar = () => {
       <button className={clsx(classes.btn, classes.smOnly)}>
         <SearchIcon />
       </button>
-      <NavLink className={clsx(classes.btn, classes.smOnly)} to="/cart">
+      <NavLink className={clsx(classes.navLink, classes.smOnly, "my-0")} to="/cart">
         <ShoppingCartOutlinedIcon />
       </NavLink>
     </nav>

@@ -28,6 +28,11 @@
   color: white;
 }
 
+.button.florish {
+  color: white;
+  background-color: rgb(164, 53, 240);
+}
+
 .button.icon {
   min-width: auto;
   width: 4rem;
@@ -39,11 +44,14 @@
   height: 2rem;
 }
 
-.button.icon:hover,
 .button.secondary:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
 .button.primary:hover {
   background-color: #000;
+}
+
+.button.florish:hover {
+  background-color: #8710d8;
 }

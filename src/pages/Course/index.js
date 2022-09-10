@@ -31,7 +31,7 @@ const Course = () => {
   // TODO: build SeeMore component and use it in needed places
   return (
     <div className={classes.coursepage}>
-      <Header course={data.details} />
+      <Header course={data} />
       <main>
         <div className={classes.mainInner}>
           <CourseDetails course={data} />

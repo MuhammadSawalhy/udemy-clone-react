@@ -1,0 +1,13 @@
+.list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.list li {
+  padding: 0.4rem 0; 
+}
+
+.list li > svg {
+  margin-inline-end: 1.6rem;
+}

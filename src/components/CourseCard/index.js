@@ -1,6 +1,7 @@
 import Rating from "../Rating";
 import { Link } from "react-router-dom";
 import classes from "./CourseCard.module.css";
+import CourseBadge from "components/CourseBadge";
 
 console.log(classes);
 
@@ -33,10 +34,8 @@ const CourseCard = ({ course }) => {
         <span className={classes.price}>{list_price.price_string}</span>
       )}
       <span className={classes.badges}>
-        {badges?.map(({ id, badge_text }) => (
-          <span key={id} className={classes.badge}>
-            {badge_text}
-          </span>
+        {badges?.map((badge) => (
+          <CourseBadge key={badge.id} badge={badge} />
         ))}
       </span>
     </Link>

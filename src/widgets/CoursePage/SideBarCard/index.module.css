@@ -1,0 +1,22 @@
+.container {
+  padding: 1px;
+  background-color: white;
+  border-bottom: 1px solid #d1d7dc;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
+
+.details {
+  padding: 2.4rem;
+  background-color: white;
+  color: #1c1d1f;
+}
+
+.moneyGuarantee {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
