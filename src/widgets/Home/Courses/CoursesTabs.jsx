@@ -3,7 +3,7 @@ import classes from "./CoursesTabs.module.css";
 import clsx from "clsx";
 import Tab from "./Tab";
 import { useQuery } from "react-query";
-import { BACKEND_URL } from "constants";
+import { BACKEND_URL } from "@constants";
 
 const CoursesTabs = () => {
   const [activeTab, setActiveTab] = useState(0);

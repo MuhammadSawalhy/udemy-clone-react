@@ -1,9 +1,9 @@
-import Header from "widgets/CoursePage/Header";
-import Instructors from "widgets/CoursePage/Instructors";
-import CourseDetails from "widgets/CoursePage/CourseDetails";
+import Header from "@widgets/CoursePage/Header";
+import Instructors from "@widgets/CoursePage/Instructors";
+import CourseDetails from "@widgets/CoursePage/CourseDetails";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
-import { BACKEND_URL } from "constants";
+import { BACKEND_URL } from "@constants";
 import classes from "./index.module.css";
 
 const Course = () => {

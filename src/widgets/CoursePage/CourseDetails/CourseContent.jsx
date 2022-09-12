@@ -1,4 +1,4 @@
-import Button from "components/Button";
+import Button from "@components/Button";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useMemo, useState } from "react";
 import classes from "./CourseContent.module.css";

@@ -1,5 +1,5 @@
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
-import Button from "components/Button";
+import Button from "@components/Button";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
 

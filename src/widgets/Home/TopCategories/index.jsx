@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import classes from "./TopCategories.module.css";
-import topCategories from "constants/top-categories.json";
+import topCategories from "@constants/top-categories.json";
 import Category from "./Category";
 
 const TopCategories = () => {
