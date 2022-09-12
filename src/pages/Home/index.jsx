@@ -1,7 +1,7 @@
 import React from "react";
-import HomePageCourses from "@widgets/Home/Courses";
-import HomePageHeader from "@widgets/Home/Header";
-import TopCategories from "@widgets/Home/TopCategories";
+import HomePageCourses from "@widgets/HomePage/Courses";
+import HomePageHeader from "@widgets/HomePage/Header";
+import TopCategories from "@widgets/HomePage/TopCategories";
 import classes from "./Home.module.css";
 
 const Home = () => {

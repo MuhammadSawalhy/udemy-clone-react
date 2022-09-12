@@ -4,7 +4,7 @@ import { ViteAliases } from "vite-aliases";
 
 export default ({ mode }) => {
   return defineConfig({
-    plugins: [react(), ViteAliases()],
+    plugins: [react(), ViteAliases({ useConfig: true })],
     define: {
       "process.env.NODE_ENV": `"${mode}"`,
     },
