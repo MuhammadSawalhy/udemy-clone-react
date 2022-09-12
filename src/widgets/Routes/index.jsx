@@ -6,12 +6,15 @@ import { Routes, Route } from "react-router-dom";
 const index = () => {
   // TODO: build 404 page
   return (
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="course/:courseId" element={<Course />} />
+    <Routes>
+      <Route path="/">
+        <Route index element={<Home />} />
+        <Route path="search" element={<Home />}>
+          <Route path=":query" />
         </Route>
-      </Routes>
+        <Route path="course/:courseId" element={<Course />} />
+      </Route>
+    </Routes>
   );
 };
 

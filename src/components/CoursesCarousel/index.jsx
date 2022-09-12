@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import classes from "./CoursesCarousel.module.css";
 
 import CourseCard from "../CourseCard";
-// import { Carousel, CarouselItem, CarouselControl } from "reactstrap";
 import Carousel from "react-bootstrap/Carousel";
 import useCardsCount from "../../hooks/useCardsCount";
 

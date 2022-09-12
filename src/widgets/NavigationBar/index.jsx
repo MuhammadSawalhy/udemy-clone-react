@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavSearch from "./NavSearch";
 import { Link, NavLink } from "react-router-dom";
-import classes from "./NavigationBar.module.css";
+import classes from "./index.module.css";
 import clsx from "clsx";
 
 const NavigationBar = () => {

@@ -12,18 +12,15 @@ const CoursesTabs = () => {
     isLoading,
     error,
     data: tabs,
-  } = useQuery(
-    ["homepage-courses-tabs"],
-    () => {
-      return fetch(`${BACKEND_URL}/summary`).then((res) => res.json());
-    },
-    {
-      onSuccess(data) {},
-    }
-  );
+  } = useQuery(["homepage-courses-tabs"], () => {
+    return fetch(`${BACKEND_URL}/summary`).then((res) => {
+      if (!res.ok) throw res;
+      return res.json();
+    });
+  });
 
   if (isLoading) {
-    return "Loading...";
+    return <div>Loading...</div>;
   }
 
   if (error) {
@@ -32,7 +29,7 @@ const CoursesTabs = () => {
     return (
       <div>
         <p style={{ color: "red" }}>Error occured during fetching the data</p>
-        <pre>{error.toString()}</pre>
+        <pre>{error.statusText}</pre>
       </div>
     );
   }

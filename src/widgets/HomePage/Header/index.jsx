@@ -2,7 +2,7 @@ import classes from './Header.module.css';
 
 const MainPageHeader = () => {
   return (
-    <header class={classes.header}>
+    <header className={classes.header}>
       <div className={classes.bg}></div>
       <div className={classes.card}>
         <h1 className="heading-serif">New to Udemy? Lucky you.</h1>

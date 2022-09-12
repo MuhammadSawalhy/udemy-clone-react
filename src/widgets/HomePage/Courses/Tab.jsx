@@ -1,8 +1,17 @@
-import Button from "../../../components/Button";
-import CoursesCarousel from "../../../components/CoursesCarousel";
+import { useMemo } from "react";
+import { useParams } from "react-router-dom";
+import Button from "@components/Button";
+import NothingHere from "@components/NothingHere";
+import CoursesCarousel from "@components/CoursesCarousel";
 import classes from "./Tab.module.css";
 
 const Courses = ({ title, header, description, items }) => {
+  const { query } = useParams();
+  console.log(query, items);
+  const filteredItems = useMemo(
+    () => (query ? items.filter((item) => item.title.includes(query)) : items),
+    [items, query]
+  );
   return (
     <div className={classes.tab}>
       <div className={classes.header}>
@@ -10,7 +19,11 @@ const Courses = ({ title, header, description, items }) => {
         <p>{description}</p>
         <Button varient="secondary">Explore {title}</Button>
       </div>
-      <CoursesCarousel courses={items} />
+      {filteredItems.length > 0 ? (
+        <CoursesCarousel courses={filteredItems} />
+      ) : (
+        <NothingHere caption="No course matches the search in this tab" />
+      )}
     </div>
   );
 };
