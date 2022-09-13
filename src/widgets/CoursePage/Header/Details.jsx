@@ -66,7 +66,13 @@ const Details = ({ details, className }) => {
         ))}
         <Link to={`/course/${id}/#reviews`}>
           {/* TODO: fix dark theme with empty stars */}
-          <Rating rating={rating} numReviews={num_reviews} starsColor="#f3ca8c" addRatingsText />
+          <Rating
+            className={classes.ratingComponent}
+            rating={rating}
+            numReviews={num_reviews}
+            starsColor="#f3ca8c"
+            addRatingsText
+          />
         </Link>
         <span>{num_subscribers} students</span>
       </div>

@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { BACKEND_URL } from "@constants";
 import classes from "./index.module.css";
+import TopBar from "@widgets/CoursePage/TopBar";
 
 const Course = () => {
   const { courseId } = useParams();
@@ -37,6 +38,7 @@ const Course = () => {
   return (
     <div className={classes.coursepage}>
       <Header course={data} />
+      <TopBar course={data} />
       <main>
         <div className={classes.mainInner}>
           <CourseDetails course={data} />

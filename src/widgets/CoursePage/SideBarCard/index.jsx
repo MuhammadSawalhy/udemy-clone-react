@@ -5,15 +5,14 @@ import Price from "./Price";
 import Preview from "../Preview";
 import clsx from "clsx";
 
-const SideBarCard = ({ course, className }) => {
-  console.log(course);
+const SideBarCard = ({ course, className, float = False }) => {
   const {
     details: { price, image_750x422 },
   } = course;
 
   return (
-    <div className={clsx(classes.container, className)}>
-      <Preview image={image_750x422} />
+    <div className={clsx(classes.container, className, float && classes.float)}>
+      <Preview className={classes.preview} image={image_750x422} />
       <div className={classes.details}>
         <Price className="mb-2" price={price} />
         <Button className="d-block mb-3 w-100" size="large" varient="florish">
