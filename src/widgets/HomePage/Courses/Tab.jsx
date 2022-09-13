@@ -7,7 +7,6 @@ import classes from "./Tab.module.css";
 
 const Courses = ({ title, header, description, items }) => {
   const { query } = useParams();
-  console.log(query, items);
   const filteredItems = useMemo(
     () => (query ? items.filter((item) => item.title.includes(query)) : items),
     [items, query]

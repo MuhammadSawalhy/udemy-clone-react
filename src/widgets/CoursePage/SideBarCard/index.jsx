@@ -11,7 +11,7 @@ const SideBarCard = ({ course, className, float = False }) => {
   } = course;
 
   return (
-    <div className={clsx(classes.container, className, float && classes.float)}>
+    <div className={clsx(classes.sidebarCard, float && classes.float, className)}>
       <Preview className={classes.preview} image={image_750x422} />
       <div className={classes.details}>
         <Price className="mb-2" price={price} />

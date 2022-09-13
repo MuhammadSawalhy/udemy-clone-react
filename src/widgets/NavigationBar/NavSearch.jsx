@@ -7,7 +7,6 @@ const NavSearch = () => {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const { query: urlQuery } = useParams();
-  console.log(urlQuery);
   useEffect(() => {
     setQuery(urlQuery || "");
   }, [urlQuery]);

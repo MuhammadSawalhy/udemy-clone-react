@@ -1,12 +1,13 @@
-import classes from "./index.module.css";
-import clsx from "clsx";
 import { Link } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Details from "./Details";
-import SideBarCard from "../SideBarCard";
 import AddToCartSmallScreen from "./AddToCartSmallScreen";
+import Details from "./Details";
 import Preview from "../Preview";
-import { useIntersectionObserver } from "react-intersection-observer-hook";
+import SideBarCard from "../SideBarCard";
+import useIntersectionObserver from "@hooks/useIntersectionObserver";
+import classes from "./index.module.css";
+import clsx from "clsx";
+import { useRef } from "react";
 
 const ContextInfo = ({ context }) => {
   const { category, subcategory, label } = context;
@@ -28,8 +29,8 @@ const ContextInfo = ({ context }) => {
 
 const Header = ({ course }) => {
   const { details } = course;
-  const [ref, { entry }] = useIntersectionObserver();
-  const isVisible = entry && entry.isIntersecting;
+  const ref = useRef();
+  const isIntersecting = useIntersectionObserver(ref);
 
   return (
     <header ref={ref} className={classes.header}>
@@ -40,8 +41,8 @@ const Header = ({ course }) => {
         <AddToCartSmallScreen className={clsx(classes.addToCart, classes.smOnly)} />
         <SideBarCard
           course={course}
-          float={!isVisible}
-          className={clsx(classes.sidebar, classes.lgOnly)}
+          float={!isIntersecting}
+          className={clsx(classes.sidebar, classes.lgOnly, !isIntersecting && classes.float)}
         />
       </div>
     </header>

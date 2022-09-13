@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.sidebar {
+.sidebar:not(.float) {
   position: absolute;
   right: 4.8rem; /* same as padding */
   top: 0;
