@@ -32,8 +32,6 @@ const Course = () => {
     );
   }
 
-  console.log(data);
-
   // TODO: build SeeMore component and use it in needed places
   return (
     <div className={classes.coursepage}>
