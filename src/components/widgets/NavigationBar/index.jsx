@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button";
+import Button from "@components/atoms/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageIcon from "@mui/icons-material/Language";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";

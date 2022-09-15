@@ -1,4 +1,4 @@
-import Button from "@components/Button";
+import Button from "@components/atoms/Button";
 import { useContext, useEffect, useMemo, useState } from "react";
 import classes from "./CourseContent.module.css";
 import OpenContext from "./OpenContext";

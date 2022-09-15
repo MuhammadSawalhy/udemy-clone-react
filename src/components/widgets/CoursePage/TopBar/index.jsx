@@ -1,5 +1,5 @@
-import CourseBadge from "@components/CourseBadge";
-import Rating from "@components/Rating";
+import CourseBadge from "@components/atoms/CourseBadge";
+import Rating from "@components/atoms/Rating";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
 

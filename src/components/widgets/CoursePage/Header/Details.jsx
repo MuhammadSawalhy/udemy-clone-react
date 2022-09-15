@@ -1,13 +1,13 @@
 import LanguageIcon from "@mui/icons-material/Language";
 import ClosedCaptionIcon from "@mui/icons-material/ClosedCaption";
 import NewReleasesIcon from "@mui/icons-material/NewReleases";
-import Rating from "@components/Rating";
-import CourseBadge from "@components/CourseBadge";
+import Rating from "@components/atoms/Rating";
+import CourseBadge from "@components/atoms/CourseBadge";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import classes from "./Details.module.css";
 import clsx from "clsx";
-import Button from "@components/Button";
+import Button from "@components/atoms/Button";
 
 const Langs = ({ captions, lastUpdateDate }) => {
   const [captionLangs, setCaptionLangs] = useState(captions.slice(0, 2));

@@ -1,7 +1,7 @@
 import Rating from "../Rating";
 import { Link } from "react-router-dom";
 import classes from "./CourseCard.module.css";
-import CourseBadge from "@components/CourseBadge";
+import CourseBadge from "@components/atoms/CourseBadge";
 
 console.log(classes);
 

@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
-import Button from "@components/Button";
-import NothingHere from "@components/NothingHere";
-import CoursesCarousel from "@components/CoursesCarousel";
+import Button from "@components/atoms/Button";
+import NothingHere from "@components/atoms/NothingHere";
+import CoursesCarousel from "@components/atoms/CoursesCarousel";
 import classes from "./Tab.module.css";
 
 const Courses = ({ title, header, description, items }) => {

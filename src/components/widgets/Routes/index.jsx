@@ -1,6 +1,6 @@
 import React from "react";
-import Home from "../../pages/Home";
-import Course from "../../pages/Course";
+import Home from "@components/pages/Home";
+import Course from "@components/pages/Course";
 import { Routes, Route } from "react-router-dom";
 
 const index = () => {

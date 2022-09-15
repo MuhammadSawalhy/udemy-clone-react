@@ -1,5 +1,5 @@
 import classes from "./index.module.css";
-import Button from "@components/Button";
+import Button from "@components/atoms/Button";
 import Includes from "./Includes";
 import Price from "./Price";
 import Preview from "../Preview";

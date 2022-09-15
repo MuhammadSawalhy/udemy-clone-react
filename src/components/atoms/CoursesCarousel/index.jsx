@@ -3,7 +3,7 @@ import classes from "./CoursesCarousel.module.css";
 
 import CourseCard from "../CourseCard";
 import Carousel from "react-bootstrap/Carousel";
-import useCardsCount from "../../hooks/useCardsCount";
+import useCardsCount from "@hooks/useCardsCount";
 
 const CoursesCarousel = ({ courses }) => {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -4,9 +4,9 @@ import "./css/style.css";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Routes from "./widgets/Routes";
-import NavigationBar from "./widgets/NavigationBar";
-import Footer from "./widgets/Footer";
+import Routes from "@components/widgets/Routes";
+import NavigationBar from "@components/widgets/NavigationBar";
+import Footer from "@components/widgets/Footer";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
