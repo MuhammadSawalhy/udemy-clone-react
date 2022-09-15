@@ -1,0 +1,94 @@
+.openClose {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.6rem 2.4rem;
+  background-color: #f7f9fa;
+  border-top: 1px solid #d1d7dc;
+  border-bottom: 1px solid #d1d7dc;
+  margin-bottom: -1px;
+  user-select: none;
+}
+
+.items {
+  display: none;
+  padding: 1.6rem 2.4rem;
+}
+
+.item {
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto max-content 1fr auto auto;
+  grid-template-areas:
+    "icon title       arrow       ... preview summary"
+    ".... description description ... ....... .......";
+}
+
+.item.previewable {
+  cursor: pointer;
+}
+
+.item.previewable :is(.title, .previewText) {
+  text-decoration: underline;
+  color: #5624d0;
+}
+
+.item .title {
+  grid-area: title;
+}
+
+.item .previewText {
+  grid-area: preview;
+}
+
+.item .icon {
+  color: black;
+  margin-right: 1.6rem;
+  grid-area: icon;
+}
+
+.item .summary {
+  color: #6a6f73;
+  text-decoration: none;
+  grid-area: summary;
+}
+
+.item .description {
+  color: #6a6f73;
+  grid-area: description;
+  margin-top: 0.8rem;
+  display: none;
+}
+
+.item :is(.summary, .previewText) {
+  margin-left: 3.2rem;
+}
+
+.item .openCloseDescription {
+  margin-left: 0.8rem;
+  background-color: #f7f9fa;
+  color: #1c1d1f;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  grid-area: arrow;
+  display: inline-grid;
+  place-items: center;
+}
+
+.item.descriptionOpened .openCloseDescription {
+  rotate: 180deg;
+}
+
+.item.descriptionOpened .description {
+  display: block;
+}
+
+.opened .arrow {
+  transform: rotate(180deg);
+}
+
+.opened .items {
+  display: block;
+}

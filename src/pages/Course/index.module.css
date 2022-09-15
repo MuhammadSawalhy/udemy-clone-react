@@ -1,0 +1,24 @@
+.coursepage {
+  --max-width: 118.4rem;
+  --inner-max-width: 70rem;
+}
+
+.coursepage main {
+  margin: auto;
+  max-width: var(--max-width);
+  padding: 3.2rem 4.8rem;
+}
+
+.mainInner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  max-width: var(--inner-max-width);
+}
+
+@media screen and (max-width: 1180px) {
+  .coursepage {
+    --max-width: 108.4rem;
+    --inner-max-width: 60rem;
+  }
+}

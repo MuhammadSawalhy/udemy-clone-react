@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.price {
+  font-size: 3.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  white-space: nowrap;
+  color: #6a6f73;
+}
+
+.percent {
+  color: #6a6f73;
+}

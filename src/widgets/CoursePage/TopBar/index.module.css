@@ -1,0 +1,38 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* just below the navbar and below the sidebar card */
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.16);
+  padding: 1.6rem 2.4rem;
+  color: #fff;
+  background-color: #1c1d1f;
+  font-size: 1.4rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ratingComponent > span:last-of-type {
+  text-decoration: underline;
+}
+
+.container a,
+.container a:visited {
+  color: #cec0fc;
+  font-size: 1.4rem;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}

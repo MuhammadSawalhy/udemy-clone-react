@@ -1,0 +1,31 @@
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.6rem;
+  white-space: nowrap;
+}
+
+.tabs button {
+  border: none;
+  background-color: transparent;
+  color: #6a6f73;
+  cursor: pointer;
+  padding: 0.8rem 0.4rem;
+  font-weight: bold;
+  height: 4.8rem;
+}
+
+.tabs button:hover,
+.tabs button.active {
+  color: #1c1d1f;
+}
+
+@media screen and (max-width: 600px) {
+  .tabs-tab {
+    padding: 2rem;
+  }
+
+  .courses-carousel {
+    padding: 0;
+  }
+}

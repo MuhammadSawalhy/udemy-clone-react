@@ -1,0 +1,86 @@
+.header {
+  background-color: #1c1d1f;
+  padding-block: 3.2rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.header > div {
+  padding-inline: 4.8rem;
+  max-width: var(--max-width);
+  margin: auto;
+  position: relative;
+}
+
+.sidebar:not(.float) {
+  position: absolute;
+  right: 4.8rem; /* same as padding */
+  top: 0;
+}
+
+.header a,
+.header a:visited {
+  color: #cec0fc;
+  font-size: 1.4rem;
+}
+
+.context {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.context a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.context {
+  max-width: var(--inner-max-width);
+}
+
+.preview {
+  margin-bottom: 1.6rem;
+}
+
+.smOnly {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .lgOnly {
+    display: none;
+  }
+
+  .smOnly {
+    display: block;
+  }
+
+  .header > div {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header > div {
+    padding: 0;
+    width: auto;
+  }
+
+  .preview {
+    max-width: var(--inner-max-width);
+    margin-inline: auto;
+  }
+
+  .details, .context, .addToCart {
+    padding-inline: 2.4rem;
+  }
+
+  .details h1 {
+    font-size: 2.4rem;
+  }
+
+  .details p {
+    font-size: 1.6rem;
+  }
+}

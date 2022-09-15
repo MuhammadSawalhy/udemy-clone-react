@@ -1,0 +1,45 @@
+.preview {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  position: relative;
+  color: white;
+}
+
+.preview::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(28, 29, 31, 0) 0%, rgba(28, 29, 31, 0.9) 100%);
+}
+
+.image {
+  width: 100%;
+}
+
+.playCircle {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 50%;
+}
+
+.playCircle > svg {
+  width: 8rem;
+  height: 8rem;
+  margin: -1rem;
+}
+
+.text {
+  z-index: 2;
+  left: 50%;
+  bottom: 1.6rem;
+  position: absolute;
+  transform: translateX(-50%);
+  font-weight: bold;
+}

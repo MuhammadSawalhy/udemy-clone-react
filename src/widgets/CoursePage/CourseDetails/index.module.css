@@ -1,0 +1,20 @@
+.courseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.courseDetails h2 {
+  margin-bottom: 1.6rem;
+}
+
+.requirements svg {
+  width: rem;
+  margin-right: 1.6rem;
+}
+
+.requriements li {
+  padding-block: 0.4rem;
+  display: flex;
+  align-items: center;
+}

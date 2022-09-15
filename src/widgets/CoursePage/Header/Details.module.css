@@ -1,0 +1,38 @@
+.details {
+  max-width: var(--inner-max-width);
+}
+
+.details > div {
+  margin-bottom: 0.8rem;
+}
+
+.details > p {
+  font-size: 1.9rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ratingComponent > span:last-of-type {
+  text-decoration: underline;
+}
+
+.lang {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.lang > span > svg {
+  margin-right: 0.8rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .lang {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
