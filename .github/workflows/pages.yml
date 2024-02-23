@@ -17,7 +17,7 @@ jobs:
 
       - name: Install and Build 🔧
         env:
-          BACKEND_URL: ${{ vars.BACKEND_URL }}
+          VITE_BACKEND_URL: ${{ vars.BACKEND_URL }}
         run: |
           ls
           npm ci
