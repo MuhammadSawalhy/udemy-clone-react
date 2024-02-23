@@ -1,2 +1,2 @@
-export const BACKEND_URL = process.env.BACKEND_URL ?? "http://localhost:1234";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL ?? "http://localhost:1234";
 
