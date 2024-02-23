@@ -16,6 +16,8 @@ jobs:
         #  key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       - name: Install and Build 🔧
+        env:
+          BACKEND_URL: ${{ vars.BACKEND_URL }}
         run: |
           ls
           npm ci
