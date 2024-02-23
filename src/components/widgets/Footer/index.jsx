@@ -2,6 +2,7 @@ import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import Button from "@components/atoms/Button";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
+import { FRONTEND_URL } from "@constants/index";
 
 const Footer = () => {
   return (
@@ -120,7 +121,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.logo}>
-          <Link to={process.env.ROOT_URL ?? "/"}>
+          <Link to={FRONTEND_URL}>
             <img width="91" src="/assets/logo-udemy-inverted.svg" alt="udemy logo" />
           </Link>
           <span>© {new Date().getFullYear()} Udemy, Inc.</span>

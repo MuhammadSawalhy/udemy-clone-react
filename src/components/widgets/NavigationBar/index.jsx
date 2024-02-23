@@ -5,9 +5,10 @@ import LanguageIcon from "@mui/icons-material/Language";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavSearch from "./NavSearch";
-import { Link, NavLink } from "react-router-dom";
 import classes from "./index.module.css";
 import clsx from "clsx";
+import { Link, NavLink } from "react-router-dom";
+import { FRONTEND_URL } from "@constants/index";
 
 const NavigationBar = () => {
   return (
@@ -17,7 +18,7 @@ const NavigationBar = () => {
       </button>
       <div className={clsx(classes.placeholder, classes.smOnly)}></div>
       <div className={clsx(classes.logo, classes.sm)}>
-        <Link to={process.env.ROOT_URL ?? "/"}>
+        <Link to={FRONTEND_URL}>
           <img src="/assets/logo-udemy.svg" alt="udemy logo" />
         </Link>
       </div>
