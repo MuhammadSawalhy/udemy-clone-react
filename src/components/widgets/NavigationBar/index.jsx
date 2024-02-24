@@ -8,7 +8,6 @@ import NavSearch from "./NavSearch";
 import classes from "./index.module.css";
 import clsx from "clsx";
 import { Link, NavLink } from "react-router-dom";
-import { FRONTEND_URL } from "@constants/index";
 
 const NavigationBar = () => {
   return (
@@ -18,7 +17,7 @@ const NavigationBar = () => {
       </button>
       <div className={clsx(classes.placeholder, classes.smOnly)}></div>
       <div className={clsx(classes.logo, classes.sm)}>
-        <Link to={FRONTEND_URL}>
+        <Link to="/">
           <img src="/assets/logo-udemy.svg" alt="udemy logo" />
         </Link>
       </div>
