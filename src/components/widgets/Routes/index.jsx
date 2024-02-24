@@ -1,10 +1,9 @@
-import React from "react";
 import Home from "@components/pages/Home";
 import Course from "@components/pages/Course";
+import NotFoundPage from "@components/pages/404"; // Import the 404 page component
 import { Routes, Route } from "react-router-dom";
 
 const index = () => {
-  // TODO: build 404 page
   return (
     <Routes>
       <Route path="/">
@@ -14,8 +13,10 @@ const index = () => {
         </Route>
         <Route path="course/:courseId" element={<Course />} />
       </Route>
+      <Route path="*" element={<NotFoundPage />} /> {/* Catch-all route for 404 */}
     </Routes>
   );
 };
 
 export default index;
+
